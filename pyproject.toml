@@ -18,4 +18,5 @@ local = [
 app = [
     "alembic>=1.17.2",
     "fastapi>=0.124.2",
+    "pydantic-settings>=2.12.0",
 ]
