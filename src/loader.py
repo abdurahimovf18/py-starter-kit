@@ -26,6 +26,7 @@ class Loader:
     @asynccontextmanager
     async def lifespan(self, fastapi_app: FastAPI) -> AsyncGenerator[None, None]:
         self.container.register_singleton(FastAPI, fastapi_app)
+        fastapi_app.include_router(api.routers.router)
         await self.register_adapters()
 
         event_bus = await self.container.resolve(EventBus)
