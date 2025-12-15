@@ -1,6 +1,6 @@
 from abc import ABC
 
-from src.kernel.application.base_unit_of_work import BaseUnitOfWork
+from src.core.application.base_unit_of_work import BaseUnitOfWork
 
 
 class UnitOfWork(BaseUnitOfWork, ABC):

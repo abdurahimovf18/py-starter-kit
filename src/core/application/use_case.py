@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Generic, TypeVar
 
-from src.kernel.application.data_transfer_object import DataTransferObject
+from src.core.application.data_transfer_object import DataTransferObject
 
 InDTO = TypeVar("InDTO", bound=DataTransferObject)
 OutDTO = TypeVar("OutDTO", bound=DataTransferObject)

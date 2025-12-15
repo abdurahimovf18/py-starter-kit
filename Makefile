@@ -22,6 +22,10 @@ rebuild:
 	$(MAKE) build
 	$(MAKE) up
 
+restart:
+	$(COMPOSE_LOCAL) restart app
+
+
 # Linter Commands
 lint:
 	uv run ruff check .

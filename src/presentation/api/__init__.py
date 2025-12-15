@@ -1,6 +1,6 @@
-from . import di, routers
+from . import dependency_injection, routers
 
 __all__ = [
-    "di",
+    "dependency_injection",
     "routers",
 ]

@@ -1,4 +1,4 @@
-from src.kernel.application.application_exception import ApplicationException
+from src.core.application.application_exception import ApplicationException
 
 
 class EventBusException(ApplicationException):
@@ -22,5 +22,12 @@ class EventBusAlreadyClosedError(EventBusException):
 class EventBusNotStartedError(EventBusException):
     """
     Raised on attempt to use event bus before starting it.
+    """
+    pass
+
+
+class EventBusSetupError(EventBusException):
+    """
+    Raised on attempt to use event bus with incorrect setup.
     """
     pass
