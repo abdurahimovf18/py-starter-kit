@@ -60,6 +60,7 @@ class FastStreamEventBus(EventBus):
             message=event_data, queue=event.event_name  # type: ignore
         )
 
+    # TODO: write subscribe method
     def subscribe(
             self, 
             event: DomainEvent, 
