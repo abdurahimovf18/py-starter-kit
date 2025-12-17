@@ -54,7 +54,7 @@ services:
     restart: unless-stopped
 
   broker:
-    image: rabbitmq:3.13-management
+    image: rabbitmq:4.1.6-management
     networks:
       - app
     ports:
