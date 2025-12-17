@@ -14,17 +14,24 @@ jobs:
          run: | 
           echo "TODO: Push Images to Habor or DockerHUB later."
 
-  ruff-check:
+  lint:
     name: Linters
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-      
-      - id: "setup_docker_compose"
-        name: "Setup Docker Compose"
-        uses: ./.github/actions/docker-setup
 
-      - name: Run Linters
-        run: docker compose -f docker-compose.yaml -f ./resources/docker/ci.docker-compose.yaml exec app uv run ruff check .
-    
+    services:
+      database:
+        image: postgres:17.6
+        env:
+          POSTGRES_DB: database
+          POSTGRES_USER: database
+          POSTGRES_PASSWORD: database
+
+      broker:
+        image: rabbitmq:4.1.6-management
+        env:
+          RABBITMQ_DEFAULT_USER: guest
+          RABBITMQ_DEFAULT_PASS: guest
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v6
