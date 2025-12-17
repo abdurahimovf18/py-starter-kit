@@ -26,7 +26,7 @@ restart:
 	$(COMPOSE_LOCAL) restart app
 
 
-# Linter Commands
+# Linter/Test Commands
 lint:
 	uv run ruff check .
 
@@ -38,6 +38,13 @@ lint-fix-unsafe:
 
 lint-type:
 	uv run pyright
+
+test:
+	$(COMPOSE_LOCAL) exec app uv run pytest
+
+test-quiet:
+	$(COMPOSE_LOCAL) exec app uv run pytest -q
+
 
 # Dependency Commands
 sync:

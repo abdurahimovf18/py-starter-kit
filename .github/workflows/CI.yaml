@@ -6,7 +6,7 @@ on:
 
 jobs:
   push-images:
-    needs: [lint]
+    needs: [lint, test]
     name: Build and Push Images
     runs-on: ubuntu-latest
     steps:
@@ -14,8 +14,8 @@ jobs:
          run: | 
           echo "TODO: Push Images to Habor or DockerHUB later."
 
-  lint:
-    name: Linters
+  test:
+    name: Test
     runs-on: ubuntu-latest
 
     services:
@@ -31,6 +31,29 @@ jobs:
         env:
           RABBITMQ_DEFAULT_USER: guest
           RABBITMQ_DEFAULT_PASS: guest
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v6
+
+      - name: Setup UV
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: |
+            **/pyproject.toml
+            **/uv.lock
+          python-version: 3.12
+
+      - name: Install Dependencies
+        run: uv sync --all-groups
+
+      - name: Run Linters
+        run: uv run pytest --maxfail=1 --disable-warnings -q
+  
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
 
     steps:
       - name: "Checkout code"
