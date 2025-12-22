@@ -30,8 +30,10 @@ services:
     networks:
       - app
     depends_on:
-      - database
-      - broker
+      database:
+        condition: service_healthy       
+      broker: 
+        condition: service_healthy
     ports:
       - "8000:8000"
     restart: unless-stopped
@@ -66,3 +68,8 @@ services:
       - rabbitmq:/var/lib/rabbitmq
       - ./resources/rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 7s
+      timeout: 5s
+      retries: 2
