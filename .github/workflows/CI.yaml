@@ -53,7 +53,7 @@ jobs:
       - name: Install Dependencies
         run: uv sync --all-groups
 
-      - name: Run Linters
+      - name: Run Tests
         run: uv run pytest --maxfail=1 --disable-warnings -q
   
   lint:
