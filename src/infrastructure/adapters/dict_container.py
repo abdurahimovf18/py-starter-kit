@@ -9,7 +9,7 @@ from src.application.exceptions.container_exceptions import (
 T = TypeVar("T")
 
 
-class Container:
+class DictContainer:
     
     def __init__(self) -> None:
         self._async_factories: dict[type[object], Callable[[], Awaitable[object]]] = {}

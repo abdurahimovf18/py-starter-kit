@@ -64,7 +64,7 @@ REDIS_PASSWORD = env.REDIS_PASSWORD
 REDIS_DB = env.REDIS_DB
 
 # Logging settings
-LOG_LEVEL = env.LOG_LEVEL
+LOG_LEVEL = "DEBUG" if DEBUG else env.LOG_LEVEL 
 LOG_DIRECTORY = ROOT / "resources" / "logs"
 
 LOGGING_DICT_CONFIG: dict[str, object] = {
