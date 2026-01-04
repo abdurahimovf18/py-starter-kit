@@ -258,3 +258,16 @@
 {"asctime": "2026-01-02T13:33:17Z", "levelname": "INFO", "name": "src.loader", "message": "FastAPI lifespan completed", "filename": "loader.py", "lineno": 34}
 {"asctime": "2026-01-02T13:33:17Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Application shutdown complete.", "filename": "on.py", "lineno": 76}
 {"asctime": "2026-01-02T13:33:17Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Finished server process [11]", "filename": "server.py", "lineno": 94, "color_message": "Finished server process [\u001b[36m%d\u001b[0m]"}
+{"asctime": "2026-01-04T16:50:15Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Started server process [30]", "filename": "server.py", "lineno": 84, "color_message": "Started server process [\u001b[36m%d\u001b[0m]"}
+{"asctime": "2026-01-04T16:50:15Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Waiting for application startup.", "filename": "on.py", "lineno": 48}
+{"asctime": "2026-01-04T16:50:15Z", "levelname": "INFO", "name": "src.loader", "message": "FastAPI lifespan started", "filename": "loader.py", "lineno": 29}
+{"asctime": "2026-01-04T16:50:15Z", "levelname": "INFO", "name": "src.loader", "message": "Application startup initialized", "filename": "loader.py", "lineno": 37}
+{"asctime": "2026-01-04T16:50:15Z", "levelname": "INFO", "name": "src.loader", "message": "Application startup completed", "filename": "loader.py", "lineno": 41}
+{"asctime": "2026-01-04T16:50:15Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Application startup complete.", "filename": "on.py", "lineno": 62}
+{"asctime": "2026-01-04T16:50:19Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Shutting down", "filename": "server.py", "lineno": 264}
+{"asctime": "2026-01-04T16:50:19Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Waiting for application shutdown.", "filename": "on.py", "lineno": 67}
+{"asctime": "2026-01-04T16:50:19Z", "levelname": "INFO", "name": "src.loader", "message": "Application cleanup initialized", "filename": "loader.py", "lineno": 44}
+{"asctime": "2026-01-04T16:50:19Z", "levelname": "INFO", "name": "src.loader", "message": "Application cleanup completed", "filename": "loader.py", "lineno": 46}
+{"asctime": "2026-01-04T16:50:19Z", "levelname": "INFO", "name": "src.loader", "message": "FastAPI lifespan completed", "filename": "loader.py", "lineno": 34}
+{"asctime": "2026-01-04T16:50:19Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Application shutdown complete.", "filename": "on.py", "lineno": 76}
+{"asctime": "2026-01-04T16:50:19Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Finished server process [30]", "filename": "server.py", "lineno": 94, "color_message": "Finished server process [\u001b[36m%d\u001b[0m]"}

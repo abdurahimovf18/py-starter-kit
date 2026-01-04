@@ -50,6 +50,9 @@ class Loader:
             self.get_container
         ) 
         logger.debug("FastAPI dependencies overriden")
+
+        
+
         self.container.register_singleton(FastAPI, app)
         logger.debug("FastAPI registered")
 
